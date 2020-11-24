@@ -1,0 +1,30 @@
+<H2 class="text-center">To Do</H2>
+<!-- form.dirty : when the form is edited -->
+<!-- <div class="alert alert-warning" *ngIf="todoForm.dirty && todoForm.invalid">Enter Data</div> -->
+<div class="alert alert-warning" *ngIf="!description.dirty && description.invalid">Enter Description</div>
+<div class="alert alert-warning" *ngIf="!targetDate.dirty && targetDate.invalid">Enter Target Date</div>
+<div class="container">
+    <!-- #variable name = "ngForm" : defined the variable name for ngForm
+    #variable name = "ngModel" : defined the variable name for ngModel -->
+<form (ngSubmit)="!todoForm.invalid && saveData()" #todoForm="ngForm">
+<fieldset class="form-group">
+    
+    <label for="description">Description</label>
+    <div><input type="text" 
+        #description = "ngModel"
+        [(ngModel)] = "todo.description" 
+        name="description" required="required" class="form-control" id="description"></div>
+</fieldset>
+<fieldset class="form-group">
+    <label for="targetDate">Target Date</label>
+    <!--- the ngModelChange is used in video without using ngModelChange to event, the data cannot binding to DOM-->
+    <!-- (ngModelChange) = "todo.targetDate = $event" -->
+    <div><input type="date"
+        #targetDate = "ngModel" 
+        [ngModel] = "todo.targetDate | date:'yyyy-MM-dd'" 
+        (ngModelChange) = "todo.targetDate = $event"        
+        name="targetDate" required="required" class="form-control" id="targetDate"></div>
+</fieldset>
+<div class="text-center"><button type="submit"  class="btn btn-success">Save</button></div>
+</form>
+</div>

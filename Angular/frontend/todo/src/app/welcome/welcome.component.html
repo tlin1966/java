@@ -1,0 +1,20 @@
+<h1 class="text-center">Welcome</h1>
+<div class="container">
+<p>welcome {{name}}</p>
+<div class="container">Please go to To Do List, please click <a routerLink="/todo">here</a></div>
+ <div class="container">Please go to To Weclome page, please click 
+    <button (click)="executeWelcome()" class="btn btn-success">Welcome button</button>
+</div>
+
+<div class="container" *ngIf="weclomeMessageFromBean">The message from Bean is {{weclomeMessageFromBean}}</div> 
+
+<div class="container">Please go to To Weclome page, please click 
+    <button (click)="executeWelcomeWithParameter()" class="btn btn-success">Welcome Parameter button</button>
+
+</div>
+<div class="container">createBasicAuthenitcationHttpHeader test 
+    <button (click)="createBasicAuthenitcationHttpHeader()" class="btn btn-success">createBasicAuthenitcationHttpHeader</button>
+
+</div>
+<div class="container" *ngIf="weclomeMessageFromBean">The message from Parameter is {{weclomeMessageFromBean}}</div> 
+</div>

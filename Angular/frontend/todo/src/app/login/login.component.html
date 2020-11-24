@@ -1,0 +1,10 @@
+<h1 class="text-center">Welcome to JAVA Full Stack Learning Center</h1>
+
+<div class="container">
+<div class="alert alert-warning" *ngIf = "showError">{{errorMessage}}</div> 
+Username: <input type="text" name="username" [(ngModel)]="username">
+Passowrd: <input type="password" name="password" [(ngModel)]="password">
+<button (click)=handleLogin() class="btn btn-success">Login</button>
+<button (click)=handleBasicAuthLogin() class="btn btn-success">Basic Login</button>
+<button (click)=handleJWTAuthLogin() class="btn btn-success">JWT Login</button>
+</div>

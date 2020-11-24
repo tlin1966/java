@@ -1,0 +1,13 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div><a href="http://google.com" class="navbar-brand">Hello 2</a></div>
+        <ul class="navbar-nav">
+            <li *ngIf ="hardcodeAuthenticationService.isLoggedUser()"><a routerLink="/welcome/Eric Lin" class="nav-link">Home</a></li>
+            <li *ngIf ="hardcodeAuthenticationService.isLoggedUser()"><a routerLink="/todo" class="nav-link">To Do List</a></li>
+        </ul>
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li *ngIf = "!hardcodeAuthenticationService.isLoggedUser()"><a routerLink="/login" class="nav-link">Login</a></li>
+            <li *ngIf ="hardcodeAuthenticationService.isLoggedUser()"><a routerLink="/logout" class="nav-link">Logout</a></li>
+        </ul>
+    </nav>
+</header>
