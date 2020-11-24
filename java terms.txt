@@ -1,0 +1,24 @@
+http://tutorials.jenkov.com/
+
+Collection
+
+List - List where each element can occur more than once. elements in a List has an internal order, and the elements can be iterated in that order.
+
+Set - the same element cannot occur more than once and elements in a Set has no guaranteed internal order
+HashSet();
+LinkedHashSet guaranteeing that the order of the elements during iteration is the same as the order they were inserted into the LinkedHashSet.
+TreeSet also guarantees the order of the elements when iterated, but the order is the sorting order of the elements
+Iterator
+
+SortedSet
+Comparator
+
+Create SortedSet with Comparator
+
+Comparator comparator = new MyComparatorImpl();
+SortedSet sortedSet = new TreeSet(comparator);
+
+NavigableSet
+
+HashMap
+Tree

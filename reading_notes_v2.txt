@@ -1,0 +1,70 @@
+1. static method can be called directly, Static methods can access only static fields, methods. To access static methods there is no need to instantiate the class, you can do it just using the class name as
+	
+MyClass.sample();
+
+2. String format
+
+String a = "This is a test";
+        int b = 2;
+        String c = String.format ("%s %d",a,b);
+        System.out.println(c); //This is a test 2
+
+https://www.softwaretestinghelp.com/core-java-interview-questions/
+
+3. ArrayList
+
+    import java.util.*;  
+    class ArrayList2{  
+     public static void main(String args[]){  
+      ArrayList<String> list=new ArrayList<String>();//Creating arraylist  
+      list.add("Ravi");//Adding object in arraylist  
+      list.add("Vijay");  
+      list.add("Ravi");  
+      list.add("Ajay"); 
+
+	//Invoking arraylist object   
+      System.out.println(list); //the list is [Ravi, Vijay, Ravi, Ajay]
+ 
+      //Traversing list through Iterator  
+      Iterator itr=list.iterator();  
+      while(itr.hasNext()){  
+       System.out.println(itr.next());  
+      }  
+     }  
+    }  
+3. awt and swing. awt is for layout and event handler and listener. swing is for frame, window, button, JOptionPane
+java.awt.FlowLayout;
+java.awt.event.ActionEventListener;
+java.awt.event.ActionEvent;
+javax.swing.JFrame;
+javax.swing.JTextField;
+javax.swing.JPasswordField;
+javax.swing.JOptionPane;
+
+To create a window 
+setLayout (new FlowLayout());
+
+item1 = new JTextField(10);
+add(item1);
+
+item2 = new JTextField("Enter user name");
+add(item2);
+
+item3 = new JTextField("Uneditable",20);
+add(item3);
+
+4. ArrayList and LinkedList
+
+ArrayList	LinkedList
+1) ArrayList internally uses a dynamic array to store the elements.	
+LinkedList internally uses a doubly linked list to store the elements.
+
+2) Manipulation with ArrayList is slow because it internally uses an array.If any element is removed from the array, all the bits are shifted in memory.
+   Manipulation with LinkedList is faster than ArrayList because it uses a doubly linked list, so no bit shifting is required in memory.
+
+3) An ArrayList class can act as a list only because it implements List only.	
+   LinkedList class can act as a list and queue both because it implements List and Deque interfaces.
+
+4) ArrayList is better for storing and accessing data.	
+  LinkedList is better for manipulating data.
+

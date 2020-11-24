@@ -1,0 +1,40 @@
+1. Class loader:
+
+System Loader (classpath)->Extension Class loader->Bootstrap Class Loader (core java files)
+
+2. primitive type:byte, short, int, long,float, double,char, boolean
+
+3. wrapper class: wrapper around a data type and give it an object appearance.
+
+why do we need wrpper class?
+
+Null is a possible.
+Use it in Collection because collection only accept object.
+support object creation from another type - Integer number2 = new Integer("50"); //String
+
+Ways to create wrapper class:
+using a wrapper class constructor. Integer number2 = new Integer("50");
+Using valueof. Integer number2 = Integer.valueof("2");
+
+The different is constructor is creating object and valueof is using static method.
+
+4. Auto boxing - automatic conversuon that Java compiler between the primitive and object wrapper class.
+example 1:
+
+Integer a= 9;
+Integer b=9;
+a=b
+
+example 2:
+Integer a= new Integer(10);
+Integer b= new Integer(10);
+a!=b;
+a.equals(b) //true
+
+5.casting
+implicit casting
+explicit casting
+
+ 
+
+

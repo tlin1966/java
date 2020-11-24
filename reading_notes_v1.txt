@@ -1,0 +1,167 @@
+Type of Java class:
+
+POJO Class. “Plain Old Java Object”. A class which contains only private variables and setter and getter methods to use those variables is called POJO class.
+Static Class. - the class is to provide blueprints of its inherited classes.
+Concrete Class. - Any normal class which does not have any abstract method or a class having an implementation for all of its methods is basically a concrete class.
+Abstract Class. have zero or more abstract methods. These classes are incomplete classes.
+Final Class. a class that has been declared final cannot be subclassed
+Inner Class. Nested Inner class. Method Local inner classes. Anonymous inner classes. Static nested classes.
+
+1. primitive vs reference
+
+primitive and reference type. All the basic types e.g. int, boolean, char, short, float, long and double are known as primitiv
+Reference variables are not pointers but a handle to the object.
+
+Primitive type
+    boolean
+    byte
+    short
+    char
+    int
+    long
+    float
+    double
+
+Reference types are any instantiable class as well as arrays: String, Scanner, Random, Die, int[], String[]
+
+Scanner scanner = new Scanner(System.in);
+
+2. Point reference type object
+Point point1 = new Point (x:1, y:2);
+
+3.String is object.
+
+String message = "Hello World" + "!!";
+System.out.println(message.startsWith("Hel");
+
+4.\ in front of " or \ to skip " " or \, \n skip line break. \t skip tab
+
+String message = "Hello \"World\"" + "!!";
+
+5. int [] arry, use loop or Arrays.toString to print the array or Arrays.deepToSting for multiple demissions
+
+int [] number= new int[5]; // define number arry and allocate 5 demessions.
+
+6. final is constant
+
+7. float a=0.1f;
+
+8. double a = (double) 10/ (double) 3; //3.3333 
+   double a =  10/3; //3.0
+
+9. increment x++; 
+   int x=1;
+   x+=3; //x=4 compound operater
+
+10. Implicit casting
+byte > short > int > long > float > double
+	short x=1;
+	int y=x+2; //correct
+
+	double x=1.1;
+	int y=x+1; //loosy conversion from double to int
+
+	double x=1.1;
+	int y=int(int) x+1; //correct, explicate casting
+
+11. when data pass from form, Integer.parseInt(x) convert string to integer, if string is double use Double.parseDouble
+
+12. Math.round, Math.ceil, Math.max, Math.min, Math.random
+
+13. NumberForm is abstract class, so it cannot insantiate like new object, 
+
+	int a= 1002345;
+        NumberFormat currency = getCurrencyInstance();
+        String b = currency.format(a);
+        System.out.println(b);
+
+we can use chain method such as 
+	int a= 1002345;
+	String b = getCurrencyInstance().format(a);
+	System.out.println(b);
+
+14. Scanner and Scanner.nextByteScanner.nextLine.trim() . use 
+
+Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a Number:");
+        byte a = scanner.nextByte();
+        System.out.println(a);
+
+15. Control Flow: 
+	Comparison operation <>,>,<
+	Equality Test Operators ==, !=
+	Boolean Operators $$ ||
+	
+	int temperature = 25;
+        final int STANDARE = 50;
+        boolean isWarm = temperature > STANDARE;
+        System.out.println(isWarm);
+
+	If statement:
+
+	int temperature = 60;
+        final int HOT_TEMERATURE = 80;
+        final int COLD_TEMERATURE = 50;
+
+        if (temperature > HOT_TEMERATURE) {
+            System.out.println("It is hot day");
+        }else if ((temperature < HOT_TEMERATURE ) && (temperature > COLD_TEMERATURE)) {
+            System.out.println("Beautiful day");
+        }else{
+            System.out.println("It is cold day");
+        }
+
+	another way of if else statement
+	int income = 120_000;
+        String className = income > 1000? "First Class" : "Economy";
+
+16. switch and case - use break in case, but not in default.
+
+	String role = "admin";
+
+	switch (role) {
+	case "admin":
+	System.out.println("you are admin");
+	break;
+	case "moderator":
+	System.out.println("you are moderator");
+	break;
+	default:
+	System.out.println("you are guest");	
+}
+
+use case "string": and case "string": to display multiple cases
+
+17. for loop (initial counter; condition; control action)
+	
+	for (int i=0; i >5; i++){
+	System.out.println("This is " + i);
+	}
+18. while loop inital conter outside of while loop then while (condition) {result and control action}
+// while loop is used when we don't know what condition is going to meet
+	int i = 0;
+        while (i < 5) {
+            System.out.println("This is " + i);
+            i++;
+        }
+
+19. compare string -  a.equals
+
+	String a = "test";
+        if (a.equals("test"))
+            System.out.println("match");
+        else
+            System.out.println("No match");
+
+20. For loop array:
+
+	String[] fruits = {"Apple","Banana","Orange"};
+        for (int i=0; i < fruits.length; i++)
+            System.out.println("The fruit is " + fruits[i]);
+
+21. for each loop
+
+	String[] fruits = {"Apple","Banana","Orange"};
+        for (String fruit : fruits)
+            System.out.println("The fruit is " + fruit);
+	

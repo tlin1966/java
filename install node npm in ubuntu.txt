@@ -1,0 +1,9 @@
+1. install node.js and npm in ubuntu
+
+https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04
+
+2. install angular cli
+
+sudo npm install -g @angular/cli
+ng version
+
